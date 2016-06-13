@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="ISO-8859-1">
+<title>AngularJS Filters</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
+</head>
+<body ng-app="">
+Your Name: <input type="text" ng-model="name" > </br>
+Welcome {{ name | uppercase}} </br>
+<!-- 
+Welcome {{ name | lowercase}}
+-->
+Currency : <input type="text" ng-model="price" > </br>
+Price is {{ price | currency }}  </br>
+
+Currency : <input type="text" ng-model="price2" > </br>
+Price in Rupees is {{ price2 | currency : "Rs. " }} </br>
+
+Currency : <input type="text" ng-model="price3" > </br>
+<!--  showing decimal places can be 0 to any number, by default its 2 decimal values -->
+Price in format is {{ price3 | currency : "Rs. " : 3}} </br>  
+
+Number  : <input type="text" ng-model="number1" > </br>
+Number is {{ number1 | number : 5  }} 
+<script>
+
+</script>
+</body>
+</html>
