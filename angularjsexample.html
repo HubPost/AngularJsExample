@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLanguageApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>AngularJS MVC Example </title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
+</head>
+<body>
+<!--  ng-controller -->
+<div ng-controller="languages">
+	Select your Favourite Language : <button ng-click="php()"> PHP </button> 
+									 <button ng-click="javascript()"> JavaScript </button>
+									 <button ng-click="java()"> Java </button>
+	<p> You have selected : {{myFavLang}}</p>
+</div>
+
+<script>
+	var application = angular.module('myLanguageApp', []);   // module of app, can have [mymodule] if want to get details from 
+	application.controller('languages', ['$scope', function($scope) { //$scope is inbuilt variable of Angular and is required
+	// when using on production, you use compress software and renames this to something like hdfxdff for avoding attackers 		
+		$scope.myFavLang = 'None';
+	
+		$scope.php = function(){
+			$scope.myFavLang = 'PHP'
+		};
+		$scope.javascript = function(){
+			$scope.myFavLang = 'Javascript'
+		};
+		$scope.java = function(){
+			$scope.myFavLang = 'Java'
+		};
+		
+	
+	}]);
+</script>
+
+</body>
+</html>
