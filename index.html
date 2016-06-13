@@ -3,24 +3,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>AngularJS example</title>
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	
 	<h2> AngularJs Basic Example </h2>	
 	<!--  1. ng-model directive -->
-	<div class="form-group">
-	<input type="text" class="form-control" ng-model="name">
-	</div>
+	<input type="text" ng-model="name">
 	<!--  OR use the following for input  -->
 	<!--  FOLLOWING would not work, as ng-model can only work with specific html dom, input,textarea,select -->
 	<!--  <div ng-model="name" connecteditable="true"</div>  -->
 	<!--  this will work -->
-	<div class="form-group">
-	<textarea class="form-control" ng-model="name"></textarea>
-	</div>
+	<textarea ng-model="name"></textarea>
 	<div> hello {{name}} </div>
 	<div> hello {{name}} </div>
  
@@ -42,7 +36,6 @@
 		Extension : {{ language.extension }} </br>
 	</p> 
 	
-   </div>
    </div>
 </body>
 </html>
