@@ -5,17 +5,22 @@
  
 <title>AngularJS example</title>
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
-<body>
-	
+<body>   
+        <form> 
 	<h2 style="color:blue;margin-left:30px;"> AngularJs Basic Example </h2>	
 	<!--  1. ng-model directive -->
-	<input type="text" ng-model="name">
+	<div class="form-group">
+	<input type="text" class="form-control" ng-model="name">
+	</div>
 	<!--  OR use the following for input  -->
 	<!--  FOLLOWING would not work, as ng-model can only work with specific html dom, input,textarea,select -->
 	<!--  <div ng-model="name" connecteditable="true"</div>  -->
 	<!--  this will work -->
-	<textarea ng-model="name"></textarea>
+	<div class="form-group">
+	<textarea class="form-control" ng-model="name"></textarea>
+	</div>
 	<div> hello {{name}} </div>
 	<div> hello {{name}} </div>
  
@@ -36,7 +41,8 @@
 		Name: {{ language.name  }} </br>      
 		Extension : {{ language.extension }} </br>
 	</p> 
-	
-   </div>
+	</div>
+
+   </form>
 </body>
 </html>
