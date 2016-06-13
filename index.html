@@ -1,0 +1,60 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @HubPost
+ Unwatch 1
+  Star 0
+  Fork 0 HubPost/AngularJsExample
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathAngularJsExample/index.html
+5256641  a minute ago
+@HubPost HubPost Update index.html
+1 contributor
+RawBlameHistory     43 lines (36 sloc)  1.35 KB
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+<meta charset="ISO-8859-1">
+ 
+<title>AngularJS example</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
+</head>
+<body>
+	
+	<h2 style="color:blue;margin-left:30px;"> AngularJs Basic Example </h2>	
+	<!--  1. ng-model directive -->
+	<input type="text" ng-model="name">
+	<!--  OR use the following for input  -->
+	<!--  FOLLOWING would not work, as ng-model can only work with specific html dom, input,textarea,select -->
+	<!--  <div ng-model="name" connecteditable="true"</div>  -->
+	<!--  this will work -->
+	<textarea ng-model="name"></textarea>
+	<div> hello {{name}} </div>
+	<div> hello {{name}} </div>
+ 
+	<!--  2. ng-bind directive -->
+	<div ng-bind="name"></div>
+	<!--  3. Expressions -->
+	<div> 10 * 10 = {{10 * 10 }}</div>
+	<!--  4. ng-init -->
+	<div ng-init="language='AngularJS'"></div>
+	{{ language }}
+	Your Preferred Language: <input type="text" ng-model="language"> {{language}}
+	
+	<!--  5. ng-repeat  -->
+	<div ng-init="myFavLang=[{name : 'PHP', extension : '.php'}, {name : 'javascript', extension : '.js'}, 
+							 {name : 'Java', extension : '.java'}]">
+	
+	<p ng-repeat="language in myFavLang" >  <!--  temp var language, its like for loop -->
+		Name: {{ language.name  }} </br>      
+		Extension : {{ language.extension }} </br>
+	</p> 
+	
+   </div>
+</body>
+</html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
